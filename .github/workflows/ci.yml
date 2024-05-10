@@ -40,7 +40,6 @@ jobs:
       steps:
         - name: Upload to S3
           run: |
-            aws --version
             aws s3 sync frontend/build s3://$AWS_S3_BUCKET/ --recursive --acl public-read
 
     build_and_deploy_backend:
